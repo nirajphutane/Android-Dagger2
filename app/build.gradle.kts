@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+
+    // Kotlin
+    id("kotlin-kapt")
 }
 
 android {
@@ -60,4 +63,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Dagger2
+    implementation(libs.dagger)
+    kapt (libs.dagger.compiler)
 }
